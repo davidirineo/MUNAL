@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background: #FBFAF8;
+    width: 92%;
+    font-size: 16px;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    padding: 5px 40px;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: space-between;
+}
+
+.menuCont{
+    display: flex;
+    width: 100%;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 95px;
+    border-radius: 10px;
+    background-color: #CAB999;
+    box-shadow: 3px 5px 4px 0 rgba(202, 185, 153, 0.60);
+}
+
+.menu li{
+    color: #000;
+    font-family: "Instrument Serif";
+    font-weight: 400;
+}
+
+.seccionHorario{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding-left: 50px;
+    align-items: center;
+    background-color: gray;
+}
+
+.seccionHorario div{
+    display: flex;
+    padding: 0.5px 48px 4.5px 28px;
+    align-items: center;
+    background-color: rgba(202, 169, 153, 0.50);
+
+}
+
