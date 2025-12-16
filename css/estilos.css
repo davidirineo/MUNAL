@@ -45,12 +45,11 @@ header{
 }
 
 .seccionHorario{
-    display: flex;
     width: 100%;
     height: 200px;
-    padding-left: 50px;
-    align-items: center;
-    background-color: gray;
+    background-image: url(imgHorario.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .seccionHorario div{
