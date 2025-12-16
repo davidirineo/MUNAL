@@ -1,3 +1,4 @@
+@import url('fonts.googleapis.com');
 body{
     display: flex;
     padding: 0 20px;
@@ -40,14 +41,16 @@ header{
 
 .menu li{
     color: #000;
-    font-family: "Instrument Serif";
+    font-family: 'Instrument Serif', Arial;
     font-weight: 400;
 }
 
 .seccionHorario{
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 200px;
-    background-image: url(imgHorario.png);
+    background-image: url(imgFondos/imgHorario.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -57,6 +60,102 @@ header{
     padding: 0.5px 48px 4.5px 28px;
     align-items: center;
     background-color: rgba(202, 169, 153, 0.50);
-
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Instrument Serif', Arial;
 }
 
+.titulo{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 0 40px;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    font-family:'Istok Web', Arial;
+    font-size: 20px;
+    font-weight: 700;
+}
+.titulo label{
+    font-size: 35px;
+    font-family: 'Island Moments', cursive;
+    font-weight: 400;
+}
+
+.verMas{
+    display: flex;
+    width: 100%;
+    height: 350px;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url(imgFondos/Quiromancia.jpg);
+    background-position: center;
+}
+
+.btnVerMas{
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #CAB999;
+    box-shadow: 0 4px 4px 0 rgba(202, 185, 153, 0.25);
+}
+
+.carrusel{
+    display: flex;
+    width: 100%;
+    height: 260px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    align-self: stretch;
+    background-color: #FFF;
+}
+
+.ubicacion{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    align-items: flex-start;
+    gap:250px;
+    background-color: #BEAFA2;
+}
+
+.direccion{
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    font-family:'Instrument Serif', Arial;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    padding: 5px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #CAB999;
+    font-family: 'Instrument Serif', Arial;
+    font-size: 24px;
+}
+
+footer div{
+    display: flex;
+    padding: 5px 50px;
+    gap: 50px;
+    align-items: flex-start;
+}
