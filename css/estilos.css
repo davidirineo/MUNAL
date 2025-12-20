@@ -1,3 +1,4 @@
+/*Configuracion de la página*/
 body{
     display: flex;
     padding: 0 20px;
@@ -8,7 +9,7 @@ body{
     width: 92%;
     font-size: 16px;
 }
-
+ /*Encabezado*/
 header{
     display: flex;
     width: 100%;
@@ -17,7 +18,7 @@ header{
     flex-shrink: 0;
     justify-content: space-between;
 }
-
+ /*Menú de la página*/
 .menuCont{
     display: flex;
     width: 100%;
@@ -44,6 +45,21 @@ header{
     font-weight: 400;
 }
 
+.menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*Boton general */
+
+.btnVerMas{
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #CAB999;
+    box-shadow: 0 4px 4px 0 rgba(202, 185, 153, 0.25);
+}
+
+/*===========Configuracion para index==============*/
 .seccionHorario{
     display: flex;
     align-items: center;
@@ -94,13 +110,6 @@ header{
     background-position: center;
 }
 
-.btnVerMas{
-    padding: 15px 30px;
-    border-radius: 10px;
-    background-color: #CAB999;
-    box-shadow: 0 4px 4px 0 rgba(202, 185, 153, 0.25);
-}
-
 .carrusel{
     display: flex;
     width: 100%;
@@ -138,7 +147,9 @@ header{
     font-size: 20px;
     text-align: center;
 }
+/*Fin de configuracion index*/
 
+/*Pie de página para todas */
 footer{
     display: flex;
     width: 100%;
