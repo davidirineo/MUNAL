@@ -21,7 +21,7 @@ header{
 .menuCont{
     display: flex;
     width: 100%;
-    padding: 5px 10px;
+    padding: 5px auto;
     justify-content: center;
     align-items: flex-start;
 }
@@ -48,7 +48,7 @@ header{
     display: flex;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: auto;
     background-image: url(imgFondos/imgHorario.png);
     background-repeat: no-repeat;
     background-position: center;
