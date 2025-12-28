@@ -149,6 +149,213 @@ header{
 }
 /*Fin de configuracion index*/
 
+/*===========Contacto==============*/
+
+.contenedorContacto {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.infoContacto {
+    width: 40%;
+}
+
+.formularioLista {
+    width: 50%;
+}
+
+.formContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formContacto label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 5px;
+}
+
+.formContacto input,
+.formContacto select,
+.formContacto textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Istok Web', sans-serif;
+}
+
+.formContacto textarea {
+    resize: none;
+}
+
+/*Fin de configuracion de contacto*/
+
+/*===========Pago==============*/
+
+.contenedorPago {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.resumenCarrito {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+#listaCarrito {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#listaCarrito li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.totalPago {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.formPagoLista {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.formPago {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formPago label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 5px;
+}
+
+.formPago input {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: 'Istok Web', sans-serif;
+}
+
+
+.formPago .btnVerMas {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/*Fin de configuracion de Pago*/
+
+/*===========Carrito==============*/
+
+.contenedorCarrito {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+#listaCarrito {
+    list-style: none;
+    padding: 0;
+}
+
+#listaCarrito li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.resumenCarrito {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*Fin de configuracion de carrito*/
+
+/*===========Conquista==============*/
+
+.bloqueConquista{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cbbba7;
+    padding: 30px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.textoConquista{
+    width: 70%;
+    background: #f5f5f5;
+    padding: 25px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.imagenConquista{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenConquista img{
+    width: 100%;
+    max-width: 200px;
+}
+
+.galeriaConquista{
+    margin-top: 40px;
+}
+
+.galeriaWrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedorGaleria{
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.contenedorGaleria img{
+    width: 23%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.flecha{
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*Fin de configuracion de conquista*/
+
 /*Pie de página para todas */
 footer{
     display: flex;

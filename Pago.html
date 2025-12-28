@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito | MUNAL</title>
+    <title>Pago | MUNAL</title>
 
     <link rel="stylesheet" href="css/estilos.css">
 
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Island+Moments&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -40,23 +40,55 @@
 <main class="contenedorGeneral">
 
     <section class="encabezadoSeccion">
-        <h2>Carrito de compras</h2>
-        <p>Revisa los productos antes de realizar tu pago</p>
+        <h2>Pago</h2>
+        <p>Revisa tu carrito y completa el formulario de pago</p>
     </section>
 
-    <section class="contenedorCarrito">
+    <section class="contenedorPago">
 
-        <ul id="listaCarrito">
+        <article class="resumenCarrito">
+            <h3>Artículos en tu carrito</h3>
 
-        </ul>
+            <ul id="listaCarrito">
 
-        <div class="resumenCarrito">
-            <p>Total: $<span id="total">0.00</span></p>
+            </ul>
 
-            <a href="Pago.html" class="btnVerMas" id="btnPagar">
-                Continuar al pago
-            </a>
-        </div>
+            <p class="totalPago">
+                Total: $<span id="total">0.00</span>
+            </p>
+        </article>
+
+        <article class="formPagoLista">
+            <h3>Datos de pago</h3>
+
+            <form id="formPago" class="formPago">
+
+                <label>
+                    Nombre del titular
+                    <input type="text" required>
+                </label>
+
+                <label>
+                    Número de tarjeta
+                    <input type="text" maxlength="16" required>
+                </label>
+
+                <label>
+                    Fecha de expiración
+                    <input type="month" required>
+                </label>
+
+                <label>
+                    CVV
+                    <input type="password" maxlength="3" required>
+                </label>
+
+                <button type="submit" class="btnVerMas">
+                    Pagar ahora
+                </button>
+
+            </form>
+        </article>
 
     </section>
 
@@ -77,7 +109,7 @@
     </div>
 </footer>
 
-<script src="js/carrito.js"></script>
+<script src="js/pago.js"></script>
 
 </body>
 </html>

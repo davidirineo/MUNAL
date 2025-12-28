@@ -1,39 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
-    <!--Para el archivo de estilos-->
+    <title>Contacto | MUNAL</title>
+
     <link rel="stylesheet" href="css/estilos.css">
     
-    <!--Fuentes de la página-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Island+Moments&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Istok+Web&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <p>MUNAL</p>
-        <img src="img/icono_MUNAL.png" alt="Icono MUNAL" width="100" height="40">
-        <p>3521</p>
-    </header>
-    
-    <div class="menuCont">
-        <nav class="menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="Evento.html">Eventos</a></li>
-            <li><a href="Exposicion.html">Exposiciones</a></li>
-            <li><a href="Nosotros.html">Nosotros</a></li>
-            <li><a href="Contacto.html">Contacto</a></li>
-            <li><a href="Tienda.html">Tienda</a></li>
-            <li><a href="Carrito.html"><img src="img/carrito.png" alt="Carrito de compra" width="30px" height="30px"></a></li>
-        </nav>
-    </div>
 
+<header>
+    <p>MUNAL</p>
+    <img src="img/icono_MUNAL.png" alt="Icono MUNAL" width="100" height="40">
+    <p>3521</p>
+</header>
 
+<div class="menuCont">
+    <nav class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Evento.html">Eventos</a></li>
+        <li><a href="Exposicion.html">Exposiciones</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Contacto.html" class="activo">Contacto</a></li>
+        <li><a href="Tienda.html">Tienda</a></li>
+        <li>
+            <a href="Carrito.html">
+                <img src="img/carrito.png" width="30" height="30">
+            </a>
+        </li>
+    </nav>
+</div>
 
+<div class="imagenMenu">
+    <img src="img/fachada.jpg" alt="Imagen contacto">
+</div>
+
+<main class="contenedorGeneral">
+
+    <section class="encabezadoSeccion">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna duda o comentario? Escríbenos</p>
+    </section>
+
+    <section class="contenedorContacto">
+
+        <article class="infoContacto">
+            <h3>Museo Nacional de Arte</h3>
+            <p>📍 Tacuba 8, Centro Histórico, CDMX</p>
+            <p>📞 (55) 8647 5430</p>
+            <p>✉️ abarreramartinez30@gmail.com</p>
+            <p>🕘 Martes a domingo, 10:00 a 18:00 hrs</p>
+        </article>
+
+        <article class="formularioLista">
+
+            <form class="formContacto">
+
+                <label>
+                    Nombre completo
+                    <input type="text" required>
+                </label>
+
+                <label>
+                    Correo electrónico
+                    <input type="email" required>
+                </label>
+
+                <label>
+                    Número telefónico
+                    <input type="tel" required>
+                </label>
+
+                <label>
+                    Edad
+                    <input type="number" min="1" max="120" required>
+                </label>
+
+                <label>
+                    Género
+                    <select required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                        <option>Otro</option>
+                        <option>Prefiero no decir</option>
+                    </select>
+                </label>
+
+                <label>
+                    Asunto
+                    <input type="text" required>
+                </label>
+
+                <label>
+                    Comentarios
+                    <textarea rows="4"></textarea>
+                </label>
+
+                <button type="submit" class="btnVerMas">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </article>
+
+    </section>
+
+</main>
 
     <footer>
         <p>Redes Sociales</p>
@@ -44,5 +124,11 @@
         </div>
     </footer>
 
+<script src="js/formulario.js"></script>
+
 </body>
 </html>
+
+
+
+
