@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title>Compra Realizada</title>
     <!--Para el archivo de estilos-->
     <link rel="stylesheet" href="css/estilos.css">
     
@@ -35,50 +35,45 @@
 
 
 
-
-
     <main>
-        <div class="tituloo">
-           <h2> Nosotros </h2>
+        <div class="titulo">
+            <h2>Compra realizada</h2>
         </div>
 
-        <section class="bloqueConquista">
-            <div class="textoN misionCard">
-                <p>La misión del museo nacional del arte es conservar, percibir, estudiar y difundir obras de arte producidas en México entre la segunda mitad del siglo XIX y la primera mitad del siglo XX.</p>
-                <p>Promover una experiencia única al público para la comprensión y goce del arte.</p>
-            </div>
-        </section>
+        <div class="compraHeader" style="width:100%; padding:10px 40px;">
+            <strong id="fechaCompra">DD/MM/AAAA</strong>
+        </div>
 
-        <section class="infoBoxes">
-            <div class="infoBox">
-                <h3>Historia</h3>
-                <p>El Munal fue inaugurado en 1982. Es un edificio de la arquitectura porfiriana y ha sido testigo de diversos momentos históricos de México.</p>
-            </div>
-            <div class="infoBox">
-                <h3>Fundador</h3>
-                <p>Jorge Alberto Marínque fue una figura clave en la creación del museo y en la preservación del patrimonio artístico nacional.</p>
-            </div>
-        </section>
-
-        <section class="imagenGrande">
-            <img src="img/nosotros uno.jpeg" alt="fachada MUNAL">
-        </section>
-
-           <section class="galeriaNosotros">
-            <h3 style="margin-left:10px; font-family: 'Istok Web', Arial;">Galería</h3>
-            <div class="galeriaWrapper" style="padding: 10px 20px;">
-                <button class="flecha" id="prevNos"><img src="img/flechaI.png" alt="anterior" width="30"></button>
-                <div class="contenedorGaleria" id="galeria" style="padding: 20px 0;">
-                    <img src="img/nosotros dos.jpeg" alt="">
-                    <img src="img/nosotros tres.jpeg" alt="">
-                    <img src="img/nosotros cuatro.jpeg" alt="">
-                    <img src="img/nosotros quinto.jpeg" alt="">
+        <section class="compraContainer">
+            <div class="compraOuter">
+                <div class="compraInner">
+                    <div class="compraCardLeft">
+                        <div class="compraImage" id="compraImage">
+                            <!-- imagen del primer producto -->
+                        </div>
+                        <ul id="listaProductos" style="margin-top:20px; list-style:none; padding:0;">
+                            <!-- lista de productos comprados -->
+                        </ul>
+                    </div>
+                    <div class="compraCardRight">
+                        <h3 id="estadoCompra">ESTADO</h3>
+                        <p id="fechaLlegada" style="font-weight:700;">Fecha de llegada</p>
+                        <p id="cantidadProductos">0 producto(s)</p>
+                        <p id="totalCompra">Total: $0.00</p>
+                        <button id="verMasCompra" class="btnVerMas">Ver más</button>
+                    </div>
                 </div>
-                <button class="flecha" id="nextNos"><img src="img/flechaD.png" alt="siguiente" width="30"></button>
+            </div>
+
+            <div class="gracias">
+                <p id="mensajeGracias">¡Gracias por su compra! Esperemos que la disfrute.</p>
             </div>
         </section>
+
+        <script src="js/compra.js"></script>
 
     </main>
+
     <footer>
         <p>Redes Sociales</p>
         <div>
