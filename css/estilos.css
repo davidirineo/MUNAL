@@ -773,15 +773,17 @@ aspect-ratio: 227/320;
     font-weight: 700;
 }
 
+
 .c1{
-  display: flex;
-  justify-content: center;
-  width: 1200px;
-  height: 538px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  justify-content:center;
+  width: 100%;
   padding: 10px;
   align-items: center;
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.00);
+  background: rgba(255, 255, 255, 0.00);    
   gap: 150px;
 }
 
