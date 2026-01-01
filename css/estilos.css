@@ -64,7 +64,7 @@ header{
     display: flex;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 200px;
     background-image: url(imgFondos/imgHorario.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -93,7 +93,7 @@ header{
     font-weight: 700;
 }
 .titulo label{
-    font-size: 15px;
+    font-size: 35px;
     font-family: 'Island Moments', cursive;
     font-weight: 400;
 }
@@ -394,9 +394,9 @@ header{
     width: 100%;
     max-width: 200px;
 }
-.titulo label{
+/*.titulo label{
     font-size: 70px;
-}
+}*/
 
 /* Galería */
 .galeriatelegrafo .contenedortelegrafo img{
