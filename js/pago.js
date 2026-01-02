@@ -1,8 +1,8 @@
 let carrito = JSON.parse(localStorage.getItem("productosEnCarritoLS"));
+const formPago = document.getElementById("formPago");
 
 const contenedorCarrito = document.querySelector(".contenedorCarrito");
 const contenedorCarritoVacio = document.querySelector(".contenedorCarritoVacio");
-let botonEliminar = document.querySelectorAll(".carritoEliminar");
 const total = document.querySelector("#total");
 
 function cargarProductosCarrito(){
@@ -45,31 +45,34 @@ function cargarProductosCarrito(){
         `
     }
     
-    actualizarBotonesEliminar();
     actualizaTotal()
 }
 
 cargarProductosCarrito();
 
-function actualizarBotonesEliminar(){
-    botonEliminar = document.querySelectorAll(".carritoEliminar");
+    function actualizaTotal(){
+        total.innerHTML = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+    }
 
-    botonEliminar.forEach(boton => {
-        boton.addEventListener("click", eliminarProducto);
-    })
-}
-
-function eliminarProducto(e){
-    const idBoton = e.currentTarget.id;
-    const productoEliminado = carrito.findIndex(producto => producto.id === idBoton);
-
-    carrito.splice(productoEliminado, 1);
-
-    cargarProductosCarrito();
-
-    localStorage.setItem("productosEnCarritoLS", JSON.stringify(carrito));
-}
-
-function actualizaTotal(){
-    total.innerHTML = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+// cuando se envía el formulario de pago, guardamos la compra como 'ultimaCompra'
+if(formPago){
+    formPago.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const fechaCompra = new Date().toISOString();
+        const cantidad = carrito.reduce((s,p)=> s + (p.cantidad||p.qty||1), 0);
+        const compra = {
+            fecha: fechaCompra,
+            items: carrito,
+            total: total,
+            estado: 'En camino',
+            fechaLlegada: (function(){ const d = new Date(); d.setDate(d.getDate()+3); return d.toISOString(); })(),
+            cantidad: cantidad
+        };
+        localStorage.setItem('ultimaCompra', JSON.stringify(compra));
+        // opcional: vaciar carrito
+        localStorage.removeItem('carrito');
+        
+         // redirigir a la página de compra realizada
+        window.location.href = 'CompraRealizada.html';
+    });
 }

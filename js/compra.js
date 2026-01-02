@@ -26,7 +26,7 @@
         const cantidadProductos = document.getElementById('cantidadProductos');
         const totalCompra = document.getElementById('totalCompra');
         const verMas = document.getElementById('verMasCompra');
-
+        
         if(!listaProductos) return;
 
         // limpiar
@@ -66,7 +66,7 @@
         cantidadProductos.textContent = cantidadTotal + (cantidadTotal === 1 ? ' producto' : ' productos');
 
         // total
-        totalCompra.textContent = 'Total: $' + (compra.total ? parseFloat(compra.total).toFixed(2) : '0.00');
+        totalCompra.textContent = 'Total: $' + (compra.total ? parse(compra.total) : '0.00');
 
         // Ver más -> por ahora lleva a tienda
         if(verMas) verMas.addEventListener('click', ()=>{ window.location.href = 'Tienda.html'; });
@@ -87,7 +87,9 @@
                 total: total,
                 estado: 'En camino',
                 fechaLlegada: calcularFechaLlegada(3)
+                
             };
+
             renderCompra(compra);
         } else {
             // no hay nada: mostrar mensaje
@@ -97,4 +99,9 @@
             if(cont) cont.style.display = 'none';
         }
     }
-})();
+})(
+
+
+);
+
+
