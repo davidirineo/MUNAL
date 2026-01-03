@@ -46,8 +46,14 @@ header{
     font-weight: 400;
 }
 
-/*Ocupa todas las paginas*/
+.menu a {
+    text-decoration: none;
+    color: #000;
+}
 
+/*Ocupa todas las paginas*/
+/*Titulo que se utilizo en todas las páginas, junto con las descripciones y tipografia única para esas secciones
+Configuracion de colores para cada parte de la descripción*/
 .titulo{
         display: flex;
         padding: 0 10px;
@@ -80,6 +86,7 @@ header{
 }
 
 /*Tabla para quiro y carta astral*/
+/*Distribucion de tabla y colocacion de borde en solo unos lados de las celdas, para mostrar el diseño de linea vertical y horizontales*/
 table {
     border-collapse: collapse;
     width: 80%;
@@ -120,7 +127,7 @@ td{
 
 /*============Modificaciones para Quiro==========*/
 
-
+/*Pequeñas modificaciones en la tabla, ya que contiene menos columnas*/
 .tablaQuiro{
     width: 100%;
     display: flex;
@@ -138,6 +145,7 @@ label {
 }
 
 /*========Modificaciones para tarot========*/
+
 .desImg{
     text-align: center;
 }
@@ -156,7 +164,7 @@ label {
 }
 
 /*===========Modificaciones para Carta Astral============*/
-
+/*Estilo para la imagen principal y los dos textos a un lado*/
 .cartaAstralImg{
     display: flex;
     height: auto;

@@ -60,6 +60,7 @@ header{
 }
 
 /*===========Configuracion para index==============*/
+/*Configuración para la seccion de horarios, donde se mostrara la imagen del museo*/
 .seccionHorario{
     display: flex;
     align-items: center;
@@ -69,7 +70,7 @@ header{
     background-repeat: no-repeat;
     background-position: center;
 }
-
+/*La seccion donde se muestran los horarios, ya que se cambia de color y tipografia*/
 .seccionHorario div{
     display: flex;
     padding: 0.5px 48px 4.5px 28px;
@@ -80,6 +81,7 @@ header{
     font-family: 'Instrument Serif', Arial;
 }
 
+/*Titulo utilizado en la mayoria de páginas*/
 .titulo{
     display: flex;
     width: 100%;
@@ -92,12 +94,15 @@ header{
     font-size: 20px;
     font-weight: 700;
 }
+
+/*Label con diferente tipografia para "Bajo el signo de"*/
 .titulo label{
     font-size: 35px;
     font-family: 'Island Moments', cursive;
     font-weight: 400;
 }
 
+/*Sección para mostrar la exposición más reciente */
 .verMas{
     display: flex;
     width: 100%;
@@ -109,7 +114,7 @@ header{
     background-image: url(imgFondos/Quiromancia.jpg);
     background-position: center;
 }
-
+/*Imagenes de reseña*/
 .carrusel{
     display: flex;
     width: 100%;
@@ -123,7 +128,7 @@ header{
     align-self: stretch;
     background-color: #FFF;
 }
-
+/*Sección para la ubicacion, con diferente color que el resto y ubicar cada elemento que se muestra donde se penso en el mockup*/
 .ubicacion{
     display: flex;
     width: 100%;
@@ -133,7 +138,7 @@ header{
     gap:250px;
     background-color: #BEAFA2;
 }
-
+/*Seccion con el texto de la ubicacion, para darle un resalto se coloca diferente fondo, tamaño y tipografia*/
 .direccion{
     display: flex;
     width: auto;
