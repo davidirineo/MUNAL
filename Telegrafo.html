@@ -55,19 +55,46 @@
             </div>
         </section>
 
-        <section class="galeriatelegrafo">
-            <h3 style="margin-left:10px; font-family: 'Istok Web', Arial;">Galería</h3>
-            <div class="galeriaWrapper" style="padding: 10px 20px;">
-                <button class="flecha" id="prev"><img src="img/flechaI.png" alt="anterior" width="30"></button>
-                <div class="contenedorGaleria" id="galeria" style="padding: 20px 0;">
-                    <img src="img/telegrafo dos.jpeg" alt="">
-                    <img src="img/telegrafo tres.jpeg" alt="">
-                    <img src="img/telegrafo cuatro.jpeg" alt="">
-                    <img src="img/telegrafo cinco.jpeg" alt="">
+
+        <div class="carousel">
+
+            <div class="carrusel-list" id="carrusel-list">
+                <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                onclick="app.processingButton(event)">
+                <img src="img/flechaI.png" alt="Fleca izquierda" width="35px" height="35px">
+                </button>
+                
+                <div class="carrusel-track" id="track">
+                    
+                    <div class="carrusel">
+                        <div>
+                            <img src="img/telegrafo dos.jpeg" alt="telegrafo" width="170px" height="251px">
+                        </div>
+                    </div>
+                    <div class="carrusel">
+                        <div>
+                        <img src="img/telegrafo tres.jpeg" alt="reseña" width="170px" height="251px">
+                        </div>
+                    </div>
+                    <div class="carrusel">
+                        <div>
+                            <img src="img/telegrafo cuatro.jpeg" alt="reseña" width="170px" height="251px">
+                        </div>
+                    </div>
+                    <div class="carrusel">
+                        <div>
+                            <img src="img/telegrafo cinco.jpeg" alt="reseña" width="170px" height="251px">
+                        </div>
+                    </div>
                 </div>
-                <button class="flecha" id="next"><img src="img/flechaD.png" alt="siguiente" width="30"></button>
+
+                <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                    onclick="app.processingButton(event)">
+                        <img src="img/flechaD.png" alt="flecha derecha" width="35px" height="35px">
+                </button>
             </div>
-        </section>
+        </div>
+        
 
     </main>
 
@@ -83,6 +110,6 @@
             <a href="https://x.com/MUNALmx" target="_blank"><img src="img/x.png" alt="icono redes" width="40px" height="40px"></a>
         </div>
     </footer>
-
+    <script src="js/carrusel.js"></script>
 </body>
 </html>

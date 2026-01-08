@@ -84,8 +84,8 @@ header{
     .menu{
         flex-direction: column;
         align-items: center;
-        margin: 0;
-        width: 100%;
+        margin: 0px 2px;
+        width: 90%;
         left: 0;
         position:absolute;
         gap: 5px;
@@ -246,6 +246,7 @@ header{
     display: flex;
     height: 100%;
 }
+
 
 .carrusel img{
     object-fit: cover;
@@ -419,6 +420,15 @@ header{
 
 /*===========Pago==============*/
 
+.imagenMenu{
+    width: 100%;
+    height: auto;
+}
+
+.imagenMenu img{
+    width: 100%;
+    height: auto;
+}
 .contenedorPago {
     display: flex;
     flex-direction: column;
@@ -536,7 +546,7 @@ header{
 .contenedorCarrito {
     display: flex;
     width: 100%;
-    padding: 30px 20px;
+    padding: 30px 0px;
     gap: 40px;
     justify-content: center;
     flex-direction: column;
@@ -554,6 +564,24 @@ header{
     
 }
 
+@media(max-width:768px){
+
+    .cImagen{
+        flex-direction: column;
+    }
+
+    .cImagen img{
+        width: 120px;
+        height: 80px;
+    }
+    .cBorrar button img{
+        width: 10px;
+        height: 10px;
+        
+    }
+    
+}
+
 .fondoProductoCA p{
     text-decoration: solid;
 
@@ -561,11 +589,22 @@ header{
 
 .cImagen{
     display: flex;
-    gap: 50px;
     grid-column: 1/2;
     align-items: center;
 }
 
+@media(min-width:768px){
+    .cImagen{
+        gap: 50px
+    }   
+    .cBorrar button{
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    
+}
 .cPrecio{
     display: flex;
     flex-direction: column;
@@ -601,15 +640,16 @@ header{
     height: 100%;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
+
 
 .cBorrar button{
-    width: 50px;
-    height: 50px;
-    background-color: #BEAFA2;
+    width: 20px;
+    height: 20px;
+    background: none;
     border: none;
 }
-
 
 
 #listaCarrito {
@@ -893,11 +933,10 @@ main{
     display: flex;
     width: 100%;
     height: 180px;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    gap:150px;
     background-color: #BEAFA2;
-    justify-content: center;
+    justify-content: space-around;
 }
 /*Galeria saturno*/
 .descri{
@@ -910,16 +949,26 @@ main{
     background-color: #FFF;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     font-family: "Istok Web";
-    font-size: 20px;
+    font-size: 12px;
     text-align: center;
     font-weight: 700;
+}
+
+@media(min-width){
+    .descri{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
 }
 
 .galeria {
   display: flex;
   grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
-  padding: 40px 10%; 
+  justify-content: center;
+  width: 100%;
+  padding: 40px 10px; 
   background-color: #f4f4f4;
 }
 
@@ -957,8 +1006,9 @@ main{
   margin-top: 30px;
   color: #D8AD1F;
   border: none;
-  padding: 8px 12px;
+  padding: 8px 10px;
   cursor: pointer;
+  font-size: 15px;
 }
 /*Exposicion*/
 .exp{
@@ -994,6 +1044,12 @@ main{
         justify-content: space-between;
         align-items: center;
         padding: 40px;
+    }
+
+    .galeria {
+        flex-direction: column;
+        height: auto;
+        
     }
 }
 
@@ -1259,7 +1315,7 @@ main{
     display: grid;
     width: 100%;
     height: 60px;
-    padding: 0 40px;
+    padding: 0 10px;
     align-items: center;
     gap: 30px;
     text-align: center;
@@ -1268,18 +1324,62 @@ main{
     font-weight: 700;
 }
 
-
+.mainTienda{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 .c1{
+    display: grid;
+    grid-template-rows: 1fr;
+    place-items: center;
+    justify-content:center;
+    width: 90%;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.00);    
+    gap: 50px;
+    }
+ 
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        
+  justify-content: center;
+
+  width: 90%;              
+  padding: 10px;
+  gap: -20px;
+
+  background: #BEAFA2;
+  color: #000;
+  text-align: center;
+  font-family: "Istok Web";
+  font-size: 15px;
+  font-weight: 700;
+  margin: 4px 0;
+  line-height: 0.5;
+}
+
+.producto img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media(min-width:768px){
+    .c1{
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-  justify-content:center;
-  width: 100%;
-  padding: 10px;
-  align-items: center;
-  flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.00);    
-  gap: 150px;
+    justify-content:center;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.00);    
+    gap: 150px;
 }
 
 .producto {
@@ -1300,6 +1400,7 @@ main{
   font-weight: 700;
   margin: 4px 0;
   line-height: 0.5;
+  
 }
 
 .producto img {
@@ -1307,6 +1408,9 @@ main{
   height: auto;
   object-fit: contain;
 }
+  
+}
+
 
 /*Fin eventos*/
 
