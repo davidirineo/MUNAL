@@ -1,13 +1,15 @@
 const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementsById("menu");
+const menu = document.getElementById("menu");
+
+
 
 menuBtn.addEventListener("click", ()=>{
     menu.classList.toggle("active");
     if(menu.classList.contains("active")){
         menuBtn.innerHTML = "X";
-        menuBtn.setAttribute("aria-expanded", "true");
+        menu.classList.toggle("aria-expanded", "true");
     }else{
         menuBtn.innerHTML="☰";
-        menuBtn.setAttribute("aria-expanded", "false");
+        menu.classList.toggle("aria-expanded", "false");
     }
 })

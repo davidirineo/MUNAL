@@ -18,9 +18,10 @@ header{
     flex-shrink: 0;
     justify-content: space-between;
 }
+
+
  /*Menú de la página*/
 .menuCont{
-    position: relative;
     display: flex;
     width: 100%;
     padding: 5px auto;
@@ -34,9 +35,9 @@ header{
     list-style: none;
     display: flex;
     padding: 5px 10px;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
     align-items: center;
-    gap: 95px;
     border-radius: 10px;
     background-color: #CAB999;
     box-shadow: 3px 5px 4px 0 rgba(202, 185, 153, 0.60);
@@ -60,27 +61,49 @@ header{
     border: none;
     color: #000;
     cursor: pointer;
+    
 }
 
 @media (max-width: 768px){
+    body{
+        margin: 0px 0px;
+        padding: 0px 8px;
+    }
+    header{
+        display: flex;
+        width: 100%;
+        padding: 5px 0px;
+        align-items: center;
+        flex-shrink: 0;
+        justify-content: space-between;
+    }
+
     .menu-btn{
         display: block;
     }
     .menu{
-        position: fixed;
-        list-style: none;
         flex-direction: column;
-        top: 60px;
-        padding: 5px 10px;
-        justify-content: center;
         align-items: center;
-        gap: 95px;
-        border-radius: 10px;
-        background-color: #CAB999;
-        clip-path: circle(0px at 90% - 10%);
+        margin: 0;
+        width: 100%;
+        left: 0;
+        position:absolute;
+        gap: 5px;
+        justify-content: space-between;
+        height: auto;
+        clip-path: circle(0px at 90% -10%);
         pointer-events: none;
+        top: 100px;
     }
 
+    .menuCont{
+        display: flex;
+        width: 100%;
+        padding: 5px auto;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #CAB999;
+    } 
     .menu.active{
         clip-path: circle(1000px at 90%-10%);
         pointer-events: all;
@@ -118,6 +141,7 @@ header{
     box-shadow: 0 4px 4px 0 rgba(202, 185, 153, 0.25);
 }
 
+
 /*===========Configuracion para index==============*/
 /*Configuración para la seccion de horarios, donde se mostrara la imagen del museo*/
 .seccionHorario{
@@ -139,6 +163,7 @@ header{
     font-size: 20px;
     font-family: 'Instrument Serif', Arial;
 }
+
 
 /*Titulo utilizado en la mayoria de páginas*/
 .titulo{
@@ -173,7 +198,12 @@ header{
     background-image: url(imgFondos/Quiromancia.jpg);
     background-position: center;
 }
-/*Imagenes de reseña*/
+
+
+
+
+
+/*Imagenes de reseña
 .carrusel{
     display: flex;
     width: 100%;
@@ -186,6 +216,96 @@ header{
     gap: 55px;
     align-self: stretch;
     background-color: #FFF;
+}*/
+
+.carousel{
+    width: 98%;
+    margin: 0px 0px;
+}
+
+@media(min-width: 768px){
+    
+    .carousel{
+        margin: 0px 60px;
+
+    }
+}
+
+.carrusel-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 260px;
+    padding: 5px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+
+.carrusel-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+
+.carrusel{
+    position: relative;
+    width: 210px;
+    padding: 0 20px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.carrusel img{
+    object-fit: cover;
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+}
+
+.carrusel iframe{
+    object-fit: cover;
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+}
+
+@media(min-width: 768px){
+    .carrusel{
+        width: 250px;
+    }
+
+    .carrusel img{
+        width: 190px;
+    }
+    .carrusel iframe{
+        width: 190px;
+    }
+}
+
+.carrusel-arrow{
+    background: none;
+    border: none;
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    cursor: pointer;
+}
+
+.carrusel-arrow:focus{
+    outline: 0;
+}
+
+.carrusel-prev{
+    left: 0;
+}
+
+.carrusel-next{
+    right: 0;
 }
 /*Sección para la ubicacion, con diferente color que el resto y ubicar cada elemento que se muestra donde se penso en el mockup*/
 .ubicacion{
@@ -211,6 +331,60 @@ header{
     font-size: 20px;
     text-align: center;
 }
+
+
+@media (max-width: 768px){
+    .btnVerMas{
+        padding: 10px 25px;
+        border-radius: 10px;
+        background-color: #CAB999;
+        box-shadow: 0 4px 4px 0 rgba(202, 185, 153, 0.25);
+    }
+
+    .titulo{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        padding: 0 20px;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+        font-family:'Istok Web', Arial;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .verMas{
+        display: flex;
+        width: 98%;
+        height: 250px;
+        padding: 2px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-image: url(imgFondos/Quiromancia.jpg);
+        background-position: center;
+    }
+
+    .ubicacion{
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+        background-color: #BEAFA2;
+    }
+
+    .ubicacion iframe{
+        width: auto;
+        height: auto;
+    }
+
+}
+
+
+
 /*Fin de configuracion index*/
 
 /*===========Contacto==============*/
@@ -1018,4 +1192,33 @@ footer div{
     padding: 5px 50px;
     gap: 50px;
     align-items: flex-start;
+}
+
+@media (max-width: 768px){
+    footer{
+        display: flex;
+        width: 98%;
+        height: 120px;
+        padding: 5px 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #CAB999;
+        font-family: 'Instrument Serif', Arial;
+        font-size: 18px;
+    }
+
+    footer div{
+        display: flex;
+        padding: 5px 10px;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+    }
+
+
 }

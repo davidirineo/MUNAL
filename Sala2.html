@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarot</title>
+    <script defer src="js/menu.js"></script>
     <link rel="stylesheet" href="css/estilosSaturno.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,16 +18,23 @@
     </header>
 
     <div class="menuCont">
-        <nav class="menu">
+        <button class="menu-btn" id="menuBtn">☰</button>
+            
+        <nav class="menu" id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="Evento.html">Eventos</a></li>
             <li><a href="Exposicion.html">Exposiciones</a></li>
             <li><a href="Nosotros.html">Nosotros</a></li>
             <li><a href="Contacto.html">Contacto</a></li>
             <li><a href="Tienda.html">Tienda</a></li>
+            <!-- 
+                Enlace al carrito de compras con icono representativo.
+            -->
             <li><a href="Carrito.html"><img src="img/carrito.png" alt="Carrito de compra" width="30px" height="30px"></a></li>
+            
         </nav>
     </div>
+
 
     <!--
         Sección de introcucción a la sala de Tarot, explicando de forma resumida de que habla         
