@@ -45,7 +45,7 @@
 
 
     <main>
-        <div class="tituloo">
+        <div class="titulo">
            <h2> Nosotros </h2>
         </div>
 
@@ -71,7 +71,48 @@
             <img src="img/nosotros uno.jpeg" alt="fachada MUNAL">
         </section>
 
-           <section class="galeriaNosotros">
+        <div class="carousel">
+            <h3 style="margin-left:10px; font-family: 'Istok Web', Arial;">Galería</h3>
+            
+            <div class="carrusel-list" id="carrusel-list">
+                <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                onclick="app.processingButton(event)">
+                <img src="img/flechaI.png" alt="Fleca izquierda" width="35px" height="35px">
+                </button>
+                
+                <div class="carrusel-track" id="track">
+                    
+                    <div class="carrusel">
+                        <div>
+                            <img src="img/nosotros dos.jpeg" alt="reseña" width="170px" height="251px">
+                        </div>
+                    </div>
+                    <div class="carrusel">
+                        <div>
+                            <img src="img/nosotros tres.jpeg" alt="reseña" width="170px" height="251px">
+                        </div>
+                    </div>
+                    <div class="carrusel">
+                        <div>
+                            <img src="img/nosotros cuatro.jpeg" alt="reseña" width="170px" height="251px">
+                        </div>
+                    </div>
+                    <div class="carrusel">
+                        <div>
+                            <img src="img/nosotros quinto.jpeg" alt="reseña" width="170px" height="251px">
+                        </div>
+                    </div>
+                    
+            </div>
+
+            <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                onclick="app.processingButton(event)">
+                    <img src="img/flechaD.png" alt="flecha derecha" width="35px" height="35px">
+            </button>
+        </div>
+    </div>
+    
+           <!-- <section class="galeriaNosotros">
             <h3 style="margin-left:10px; font-family: 'Istok Web', Arial;">Galería</h3>
             <div class="galeriaWrapper" style="padding: 10px 20px;">
                 <button class="flecha" id="prevNos"><img src="img/flechaI.png" alt="anterior" width="30"></button>
@@ -83,7 +124,7 @@
                 </div>
                 <button class="flecha" id="nextNos"><img src="img/flechaD.png" alt="siguiente" width="30"></button>
             </div>
-        </section>
+        </section> -->
 
     </main>
     <footer>
@@ -94,6 +135,6 @@
             <a href="https://x.com/MUNALmx" target="_blank"><img src="img/x.png" alt="icono redes" width="40px" height="40px"></a>
         </div>
     </footer>
-
+    <script src="js/carrusel.js"></script>
 </body>
 </html>
