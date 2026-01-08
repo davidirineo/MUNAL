@@ -277,6 +277,31 @@ label {
 }
 
 
+
+/*===========Botones navegacion======*/
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.btnSala a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btnSala{
+    border: 1px solid #D8AD1F;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+
 /*==========Pie de página para todos=======*/ 
 
 footer{
