@@ -1,9 +1,9 @@
-let carrito = JSON.parse(localStorage.getItem("productosEnCarritoLS"));
+let carrito = JSON.parse(localStorage.getItem("productosEnCarritoLS")) || [];
 const formPago = document.getElementById("formPago");
 
 const contenedorCarrito = document.querySelector(".contenedorCarrito");
 const contenedorCarritoVacio = document.querySelector(".contenedorCarritoVacio");
-const total = document.querySelector("#total");
+const totalEl = document.querySelector("#total");
 
 function cargarProductosCarrito(){
 
@@ -51,7 +51,9 @@ function cargarProductosCarrito(){
 cargarProductosCarrito();
 
     function actualizaTotal(){
-        total.innerHTML = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+        const suma = carrito.reduce((acc, producto) => acc + ((producto.precio || 0) * (producto.cantidad || producto.qty || 1)), 0);
+        if(totalEl) totalEl.textContent = suma.toFixed(2);
+        return suma;
     }
 
 // cuando se envía el formulario de pago, guardamos la compra como 'ultimaCompra'
@@ -60,17 +62,18 @@ if(formPago){
         e.preventDefault();
         const fechaCompra = new Date().toISOString();
         const cantidad = carrito.reduce((s,p)=> s + (p.cantidad||p.qty||1), 0);
+        const totalAmount = actualizaTotal();
         const compra = {
             fecha: fechaCompra,
             items: carrito,
-            total: total,
+            total: totalAmount,
             estado: 'En camino',
             fechaLlegada: (function(){ const d = new Date(); d.setDate(d.getDate()+3); return d.toISOString(); })(),
             cantidad: cantidad
         };
         localStorage.setItem('ultimaCompra', JSON.stringify(compra));
         // opcional: vaciar carrito
-        localStorage.removeItem('carrito');
+        localStorage.removeItem('productosEnCarritoLS');
         
          // redirigir a la página de compra realizada
         window.location.href = 'CompraRealizada.html';

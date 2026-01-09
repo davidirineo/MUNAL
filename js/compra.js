@@ -66,7 +66,8 @@
         cantidadProductos.textContent = cantidadTotal + (cantidadTotal === 1 ? ' producto' : ' productos');
 
         // total
-        totalCompra.textContent = 'Total: $' + (compra.total ? parse(compra.total) : '0.00');
+        const totalNum = Number(compra.total) || 0;
+        totalCompra.textContent = 'Total: $' + totalNum.toFixed(2);
 
         // Ver más -> por ahora lleva a tienda
         if(verMas) verMas.addEventListener('click', ()=>{ window.location.href = 'Tienda.html'; });
